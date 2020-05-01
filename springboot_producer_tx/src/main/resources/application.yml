@@ -1,0 +1,20 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: activemq-producer-demo
+  # springboot与activemq的整合
+  activemq:
+    broker-url: tcp://127.0.0.1:61616
+    user: admin
+    password: admin
+    packages:
+      trust-all: true # 让ActiveMQ信任全部自定义对象，实现对象的序列化和反序列化
+  # 指定发送模式(点对点:false,发布订阅:true)
+  jms:
+    pub-sub-domain: true
+    template:
+      delivery-mode: persistent
+activemq:
+  name: springboot_queue
+

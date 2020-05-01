@@ -1,0 +1,19 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: activemq-consumer-demo
+
+  activemq:
+    broker-url: tcp://127.0.0.1:61616
+    user: admin
+    password: admin
+
+  jms:
+    pub-sub-domain: true
+#    pub-sub-domain: false
+
+activemq:
+#  name: springboot_queue
+  name: springboot_topic
